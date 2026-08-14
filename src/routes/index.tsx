@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [active, setActive] = useState(categories[0].id);
+  const [active, setActive] = useState(categories[0]!.id);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
