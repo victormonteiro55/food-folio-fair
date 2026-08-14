@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import hero from "@/assets/hero.jpg";
 import { categories } from "@/data/menu";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,6 +47,9 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground antialiased">
       <header className="relative isolate overflow-hidden">
+        <div className="absolute right-4 top-4 z-30 sm:right-6 sm:top-6">
+          <LanguageSwitcher />
+        </div>
         <img
           src={hero}
           alt="Plated gourmet dish on a candlelit table at dusk"
